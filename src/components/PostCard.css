@@ -1,0 +1,116 @@
+.post-actions {
+  padding: 10px 16px 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.like-btn {
+  display: flex; align-items: center; gap: 7px;
+  color: var(--text3);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 0;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  transition: all 0.18s;
+  letter-spacing: 0.04em;
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+}
+.like-btn:hover {
+  color: var(--pink);
+  border-color: rgba(255,45,120,0.4);
+  background: rgba(255,45,120,0.06);
+}
+.like-btn.liked {
+  color: var(--pink);
+  border-color: rgba(255,45,120,0.35);
+  background: rgba(255,45,120,0.08);
+}
+.like-btn.liked svg { animation: pulse 0.4s ease; }
+
+/* Product tag chips â€” sharp not pill */
+.post-tags-list {
+  display: flex; flex-wrap: wrap; gap: 5px;
+}
+
+.post-tag-chip {
+  display: flex; align-items: center; gap: 5px;
+  padding: 3px 10px;
+  background: rgba(139,47,201,0.1);
+  border: 1px solid rgba(139,47,201,0.2);
+  border-radius: 0;
+  font-size: 0.73rem;
+  color: var(--accent2);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.chip-price {
+  color: var(--text3);
+  font-size: 0.7rem;
+}
+
+.post-tag-chip.more {
+  color: var(--text3);
+  background: var(--bg3);
+  border-color: var(--border);
+}
+
+/* Caption */
+.post-caption {
+  padding: 4px 16px 14px;
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.caption-user {
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+}
+.caption-user:hover { color: var(--accent2); }
+
+/* Shop button */
+.tag-popup-shop-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.18s;
+  justify-content: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+.tag-popup-shop-btn:hover {
+  background: #7a1fb8;
+  transform: translateY(-1px);
+}
+
+/* Clickable chips */
+.post-tag-chip.clickable {
+  cursor: pointer;
+  transition: all 0.18s;
+  border: 1px solid rgba(139,47,201,0.2);
+  font-family: var(--font-body);
+}
+.post-tag-chip.clickable:hover {
+  background: rgba(139,47,201,0.2);
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-1px);
+}
