@@ -46,7 +46,6 @@ function timeAgo(ts) {
 }
 
 export default function PostCard({ post }) {
-  console.log(post.mediaUrl);
   const { user } = useAuth();
   const { toggleLike, deletePost } = usePosts();
   const navigate = useNavigate();
@@ -87,7 +86,7 @@ export default function PostCard({ post }) {
       {/* Header */}
       <div className="post-header">
         <div className="post-user" onClick={() => navigate(`/profile/${post.username}`)}>
-          {/* <img src={post.userAvatar} alt={post.username} className="post-avatar" /> */}
+          <img src={post.userAvatar} alt={post.username} className="post-avatar" />
           <div>
             <span className="post-username">{post.username}</span>
             <span className="post-time">{timeAgo(post.createdAt)}</span>
@@ -122,21 +121,7 @@ export default function PostCard({ post }) {
             <div className="reel-badge">REEL</div>
           </div>
         ) : (
-          // <img src={post.mediaUrl} alt={post.caption} className="post-media" loading="lazy" />
-          // <img
-          //   src={new URL(`../assets/${post.mediaUrl}`, import.meta.url).href}
-          //   alt={post.caption}
-          //   className="post-media"
-          // />
-          <img
-            src={
-              post.mediaUrl.startsWith("http")
-                ? post.mediaUrl
-                : new URL(`../assets/${post.mediaUrl}`, import.meta.url).href
-            }
-            alt={post.caption}
-            className="post-media"
-          />
+          <img src={post.mediaUrl} alt={post.caption} className="post-media" loading="lazy" />
         )}
 
         {/* Product Tag Dots */}

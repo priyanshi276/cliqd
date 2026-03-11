@@ -86,9 +86,16 @@ export default function Sidebar() {
 
   return (
     <>
-     
-    <span className="logo-c">C</span>
-<span className="logo-name">LIQD</span>
+      {/* Mobile topbar */}
+      <div className="mobile-topbar">
+        <div className="mobile-logo" onClick={() => navigate('/')}>
+          <span className="logo-mark">C</span>
+          <span className="logo-text">cliqd</span>
+        </div>
+        <button className="mobile-menu-btn" onClick={() => setMobileOpen(!mobileOpen)}>
+          <MenuIcon />
+        </button>
+      </div>
 
       {/* Mobile overlay */}
       {mobileOpen && <div className="sidebar-overlay" onClick={() => setMobileOpen(false)} />}

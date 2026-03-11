@@ -112,7 +112,7 @@ export default function CreatePost() {
       createPost({
         userId: user.id,
         username: user.username,
-        // userAvatar: user.avatar,
+        userAvatar: user.avatar,
         caption,
         mediaUrl: mediaPreview,
         mediaType,
