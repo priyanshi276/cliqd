@@ -1,0 +1,15 @@
+{
+  "demo-user-001": {
+    "id": "demo-user-001",
+    "name": "Demo User",
+    "email": "demo@cliqd.com",
+    "password": "$2a$10$Wi65STKzIJ8R7Rd9E/jyjOaqkytFAaB5i7cZtBO1k0wzKWkBTBXC6",
+    "username": "demouser",
+    "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=demouser",
+    "bio": "Official demo account 👋 Explore Cliqd!",
+    "coverPhoto": "",
+    "followers": [],
+    "following": [],
+    "createdAt": 1773314931753
+  }
+}
